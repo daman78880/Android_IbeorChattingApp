@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f5f7ff"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".modules.loginMethod.LoginMethodFragment">
+    <include layout="@layout/toolbar_filter_setting"
+        android:id="@+id/toolbarLoginMethods"
+        android:elevation="@dimen/_15sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarLoginMethods"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="#4a4b4d"
+    android:gravity="center"
+    android:text="@string/login_text_temp"
+    android:textSize="@dimen/_11ssp"
+    android:fontFamily="@font/gotham_rounded"
+    />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/current_login_method"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/gotham_rounded"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_8sdp"
+            />
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="@dimen/_5sdp"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_11sdp"
+        >
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/showLoginNumberTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Login Method"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/gotham_rounded"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/_25sdp"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/call_two"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/hideNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="******"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@+id/showLoginNumberTemp"
+            app:layout_constraintStart_toStartOf="@+id/showLoginNumberTemp"
+/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtHalfNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="@+id/hideNumber"
+            app:layout_constraintBottom_toBottomOf="@+id/hideNumber"
+            app:layout_constraintStart_toEndOf="@+id/hideNumber"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_8sdp"
+            android:layout_height="@dimen/_8sdp"
+            android:src="@drawable/cancel_two"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/_5sdp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
+<androidx.appcompat.widget.AppCompatTextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/other_login_method"
+    android:textSize="@dimen/_12ssp"
+    android:fontFamily="@font/gotham_rounded"
+    android:textColor="@color/black"
+    android:textStyle="bold"
+    android:layout_marginTop="@dimen/_8sdp"
+    />
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/fb_backgourn"
+    android:padding="@dimen/_11sdp"
+    android:layout_marginTop="@dimen/_8sdp"
+    >
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fb_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fb_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/facebook"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:fontFamily="@font/gotham_rounded"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/_35sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+    />
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/faceBookSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_21sdp"
+        android:thumb="@drawable/thumb"
+        app:track="@drawable/track"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/google_backgroundd"
+            android:padding="@dimen/_11sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/google_logo"
+                android:layout_width="17dp"
+                android:layout_height="14dp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:src="@drawable/ic_gg_logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/google"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:fontFamily="@font/gotham_rounded"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/_35sdp"
+                />
+            <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/googleSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_21sdp"
+            android:thumb="@drawable/thumb"
+            app:track="@drawable/track"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

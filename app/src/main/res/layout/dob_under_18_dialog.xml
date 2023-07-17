@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="12dp"
+    app:cardCornerRadius="12dp"
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/txtUnder18"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:textSize="14sp"
+    android:textColor="#4a4b4d"
+    android:gravity="center"
+    android:text="@string/in_oder_to_register_you_must_be_nat_least_18_year_old"
+    style="@style/signInOtpStyleOne"
+    app:layout_constraintTop_toTopOf="parent"
+    />
+    <View
+        android:id="@+id/viewUnder18"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/txtUnder18"
+        />
+/><androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/btnOkUnder18"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="20sp"
+    android:textColor="@color/black"
+    android:gravity="center"
+    android:text="Ok"
+    android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+    style="@style/signInOtpStyleOne"
+    app:layout_constraintTop_toBottomOf="@+id/viewUnder18"
+/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="blackNotClick">#8F8E8E</color>
+    <color name="blacklight">#00DCD9D9</color>
+    <color name="blacklightMore">#0D817F7F</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#4CAF50</color>
+    <color name="uniqe">#06b2f6</color>
+    <color name="boostRipple">#e94057</color>
+    <color name="sky">#3d9aef</color>
+    <color name="skyBule">#1877f2</color>
+    <color name="backgroundLikeColor">#f1f1f1</color>
+    <color name="backgroundLikeColorTwo">#f5f7ff</color>
+    <color name="backgroundNormal">#f5f7ff</color>
+    <color name="normaltxtColor">#4d4d4d</color>
+    <color name="gulabiColor">#bb0cc7</color>
+    <color name="greyLitee">#a8a8a8</color>
+    <color name="orange">#e45d0d</color>
+    <color name="red">#b30000</color>
+
+
+
+    <array name="progress_colors">
+        <item>#49f1aa</item>
+    <item>#60a0ff</item>
+</array>
+</resources>

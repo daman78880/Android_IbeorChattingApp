@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundNormal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.ibeor.ibeorchattingapp.modules.editProfile.GettingUserData.LookingForUserDataByTickFragment">
+    <include layout="@layout/toolbar_filter_setting"
+        android:id="@+id/toolbarEditProfileLookingFor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarEditProfileLookingFor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtMainTitleCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SELECT ONE OR MORE"
+        style="@style/newsdpStyle"
+        android:textSize="@dimen/_13sdp"
+        android:visibility="gone"
+        />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_10ssp"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvGetUserDataByCheckBok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:itemCount="6"
+                tools:listitem="@layout/user_data_looking_for" />
+        </androidx.cardview.widget.CardView>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/toogleLayoutForShowFeatureOnProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                >
+                <LinearLayout
+                    android:id="@+id/togleByTickLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_5ssp"
+                    android:visibility="gone"
+                    >
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Show on my profile"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/_13sdp"
+                        style="@style/newsdpStyle"/>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/newMatcherSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_12sdp"
+                        android:thumb="@drawable/thumb"
+                        app:track="@drawable/track"
+                        android:checked="true"
+                       android:layout_weight="1"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtMsgtoogleLayoutForShowFeatureOnProfile"
+            style="@style/newsdpStyleSimple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_5ssp"
+            android:visibility="gone"
+            android:text="@string/about_data_one" />
+    </LinearLayout>
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/circleProgressBarT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:indicatorColor="#FF655B"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

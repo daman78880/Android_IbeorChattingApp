@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/materialCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    android:elevation="@dimen/_1sdp"
+    app:cardCornerRadius="@dimen/_7sdp"
+    android:layout_marginTop="@dimen/_8sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:background="@color/white"
+                >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgLogoTemp"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:src="@drawable/search_advance"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtTitleTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Looking For"
+            android:layout_marginStart="@dimen/_10ssp"
+            style="@style/newsdpStyle"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@+id/imgLogoTemp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgLogoTemp"
+            app:layout_constraintStart_toEndOf="@+id/imgLogoTemp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtUserLookingFor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            style="@style/newsdpStyleSimple"
+            android:textColor="@color/black"
+            android:background="@null"
+            android:textColorHint="#a8a8a8"
+            android:layout_marginStart="@dimen/_5ssp"
+            android:layout_marginTop="@dimen/_5ssp"
+            android:hint="Add to your Profile"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@+id/imgLogoTemp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imPensilLogoTemp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imPensilLogoTemp"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/right_erro"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

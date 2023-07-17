@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:id="@+id/linearLayoutChildren"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_7ssp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/childrenEmoji"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/kiss_emoji"
+            android:layout_marginStart="@dimen/_10ssp"
+            android:visibility="gone"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtTitleRadioChildren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't want"
+            android:layout_gravity="center"
+            style="@style/newsdpStyle"
+            android:layout_marginStart="@dimen/_10ssp"
+            android:layout_weight="1"
+            />
+        <RadioButton
+            android:id="@+id/radioButtonChildren"
+            android:layout_width="@dimen/_23sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:gravity="end"
+            android:layout_marginEnd="@dimen/_10sdp"
+            />
+    </LinearLayout>
+    <View
+        android:id="@+id/viewChildrenView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/greyLitee"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutChildren"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

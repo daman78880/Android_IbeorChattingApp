@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "681141830688",
+    "project_id": "ibeorchattingapp",
+    "storage_bucket": "ibeorchattingapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:681141830688:android:d398c5ab9e4d62a12f2845",
+        "android_client_info": {
+          "package_name": "com.ibeor.ibeorchattingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "681141830688-qi9ha5tql6t4m1mts8v3rk81hc0gap6o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ibeor.ibeorchattingapp",
+            "certificate_hash": "68350e23a87d2f0cc78c5d519d286ccbb48f05b0"
+          }
+        },
+        {
+          "client_id": "681141830688-s7fajnm7ehmk6pkgis6a3grioeukcmde.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqL2aEQqHxwqzXLREf-HBTRgBKxIYBrWk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "681141830688-s7fajnm7ehmk6pkgis6a3grioeukcmde.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

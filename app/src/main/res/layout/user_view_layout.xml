@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:com.tbuonomo.andrui="http://schemas.android.com/tools"
+    app:cardCornerRadius="15dp"
+    app:cardUseCompatPadding="true"
+    app:cardPreventCornerOverlap="false"
+    android:background="?attr/selectableItemBackground"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardBackgroundColor="@android:color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/overlay_black"
+        android:layout_height="match_parent">
+
+<androidx.viewpager2.widget.ViewPager2
+    android:id="@+id/userImageCard"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:scaleType="centerCrop"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.0"
+    />
+        <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+            android:id="@+id/indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:rotation="90"
+            app:dotsCornerRadius="8dp"
+            android:elevation="10dp"
+            app:dotsStrokeWidth="2dp"
+            app:dotsSize="15dp"
+            app:dotsSpacing="4dp"
+            app:dotsWidthFactor="2.5"
+            app:dotsStrokeColor="@color/white"
+            app:dotsColor="@android:color/white"
+            app:selectedDotColor="@color/white"
+            app:progressMode="true"
+            app:dotsClickable="true"
+            android:layout_marginStart="@dimen/_55sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/gradientBackground"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:orientation="vertical"
+            android:background="@drawable/gradent_color"
+           app:layout_constraintBottom_toBottomOf="parent"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/userNameCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/gotham_rounded"
+            android:text="Daman Dhiman"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/gradientBackground"
+            app:layout_constraintTop_toTopOf="@+id/gradientBackground" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ImgverifyUserCard"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/verifity"
+       />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgInfoCard"
+            android:layout_width="20sp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/i_info_img"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="@+id/userNameCard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/userNameCard" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/flagLayoutHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/UserCityCardTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+           android:layout_gravity="center"
+            android:fontFamily="@font/gotham_rounded"
+            android:text="Roots:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/gradientBackground"
+            app:layout_constraintTop_toBottomOf="@+id/userNameCard" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/UserFirdFlagCard"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="10dp"
+       android:layout_gravity="center_vertical"
+            android:fontFamily="@font/gotham_rounded"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/UserCityCardTemp"
+            app:layout_constraintStart_toEndOf="@+id/UserCityCardTemp"
+            app:layout_constraintTop_toTopOf="@+id/UserCityCardTemp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/UserFlagPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="+"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@+id/UserFirdFlagCard"
+            app:layout_constraintStart_toEndOf="@+id/UserFirdFlagCard"
+            app:layout_constraintTop_toTopOf="@+id/UserFirdFlagCard" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/UserSecondFlagCard"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/gotham_rounded"
+            android:src="@drawable/unitted_state"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/UserFlagPlus"
+            app:layout_constraintStart_toEndOf="@+id/UserFlagPlus"
+            app:layout_constraintTop_toTopOf="@+id/UserFlagPlus" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgLocationImgTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/location_two"
+
+            android:layout_gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/UserCityCardTemp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtLocationCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/gotham_rounded"
+            android:text="5 miles aways"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imgLocationImgTemp"
+            app:layout_constraintStart_toEndOf="@+id/imgLocationImgTemp"
+            app:layout_constraintTop_toTopOf="@+id/imgLocationImgTemp" />
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout
+            android:id="@+id/right_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" LIKE "
+                android:layout_gravity="start"
+                android:rotation="310"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/gotham_rounded"
+                android:textStyle="bold"
+                android:background="@drawable/overlay_green_one"
+                android:textColor="@color/green"
+                android:padding="5dp"
+                android:textSize="44sp"
+                />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/left_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/overlay_black_one"
+                android:rotation="40"
+                android:fontFamily="@font/gotham_rounded"
+                android:textStyle="bold"
+
+                android:text=" NOPE "
+                android:textColor="@color/red"
+                android:layout_gravity="end"
+                android:padding="5dp"
+                android:textSize="44sp"
+                />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/top_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  SUPER  \n LIKE "
+                android:layout_marginBottom="130dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:fontFamily="@font/gotham_rounded"
+                android:rotation="330"
+                android:background="@drawable/overlay_golden"
+                android:layout_gravity="bottom|center"
+                android:textColor="@color/uniqe"
+                android:padding="5dp"
+                android:textSize="44sp"
+
+                />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/bottom_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notting"
+                android:fontFamily="@font/gotham_rounded"
+                android:background="@drawable/overlay_black_one"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="top|center"
+                android:textColor="@color/red"
+                android:padding="10dp"
+                android:textSize="54sp"
+                />
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

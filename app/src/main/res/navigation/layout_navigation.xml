@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_navigation"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.welcome.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_troubleSigningWelcomeFragment"
+            app:destination="@id/troubleSigningWelcomeFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_createAccountFragment"
+            app:destination="@id/createAccountFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_addImageFragment"
+            app:destination="@id/addImageFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_registerMailFragment"
+            app:destination="@id/registerMailFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/troubleSigningWelcomeFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.troubleSigning.TroubleSigningWelcomeFragment"
+        android:label="fragment_trouble_signing_welcome"
+        tools:layout="@layout/fragment_trouble_signing_welcome" >
+        <action
+            android:id="@+id/action_troubleSigningWelcomeFragment_to_siginnByEmailFragment"
+            app:destination="@id/siginnByEmailFragment"
+            app:popUpTo="@id/welcomeFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/siginnByEmailFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.troubleSigning.signInByEmail.SiginnByEmailFragment"
+        android:label="fragment_siginn_by_email"
+        tools:layout="@layout/fragment_siginn_by_email" >
+        <action
+            android:id="@+id/action_siginnByEmailFragment_to_signinByEmailSuccessFragment"
+            app:destination="@id/signinByEmailSuccessFragment"
+            app:popUpTo="@id/welcomeFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/signinByEmailSuccessFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.troubleSigning.signInByEmail.SigninByEmailSuccessFragment"
+        android:label="fragment_signin_by_email_success"
+        tools:layout="@layout/fragment_signin_by_email_success" />
+    <fragment
+        android:id="@+id/createAccountFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.createAccount.CreateAccountFragment"
+        android:label="fragment_create_account"
+        tools:layout="@layout/fragment_create_account" >
+        <action
+            android:id="@+id/action_createAccountFragment_to_troubleSigningWelcomeFragment"
+            app:destination="@id/troubleSigningWelcomeFragment" />
+        <action
+            android:id="@+id/action_createAccountFragment_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:popUpTo="@id/welcomeFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.signIn.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_signOtpFragment"
+            app:destination="@id/signOtpFragment"
+            app:popUpTo="@id/welcomeFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/signOtpFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.signIn.signOtp.SignOtpFragment"
+        android:label="fragment_sign_otp"
+        tools:layout="@layout/fragment_sign_otp" >
+        <action
+            android:id="@+id/action_signOtpFragment_to_registerMailFragment"
+            app:destination="@id/registerMailFragment"
+            app:popUpTo="@id/welcomeFragment"/>
+        <action
+            android:id="@+id/action_signOtpFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+        <action
+            android:id="@+id/action_signOtpFragment_to_gettingLocationFragment"
+            app:destination="@id/gettingLocationFragment" />
+        <action
+            android:id="@+id/action_signOtpFragment_to_selectCountryFragment"
+            app:destination="@id/selectCountryFragment" />
+        <action
+            android:id="@+id/action_signOtpFragment_to_registerNameFragment"
+            app:destination="@id/registerNameFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/registerMailFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.registerMail.RegisterMailFragment"
+        android:label="fragment_register_mail"
+        tools:layout="@layout/fragment_register_mail" >
+        <action
+            android:id="@+id/action_registerMailFragment_to_registerNameFragment"
+            app:destination="@id/registerNameFragment"
+            app:popUpTo="@id/signInFragment"
+            app:popUpToInclusive="true"/>
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/registerNameFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.registerMail.RegisterNameFragment"
+        android:label="fragment_register_name"
+        tools:layout="@layout/fragment_register_name"
+        app:popUpTo="@id/signInFragment"
+        app:popUpToInclusive="true">
+
+        <action
+            android:id="@+id/action_registerNameFragment_to_genderFragment"
+            app:destination="@id/genderFragment"
+            app:popUpTo="@id/signInFragment"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/gettingLocationFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.location.GettingLocationFragment"
+        android:label="fragment_getting_location"
+        tools:layout="@layout/fragment_getting_location" >
+        <action
+            android:id="@+id/action_gettingLocationFragment_to_welcomeSignInIbeorFragment"
+            app:destination="@id/welcomeSignInIbeorFragment"
+            app:popUpTo="@id/selectCountryFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.ibeor.ibeorchattingapp.modules.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_userInfoFragment"
+            app:destination="@id/userInfoFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_filterSettingFragment"
+            app:destination="@id/filterSettingFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/genderFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.gettingUserDetail.GenderFragment"
+        android:label="fragment_gender"
+        tools:layout="@layout/fragment_gender" >
+        <action
+            android:id="@+id/action_genderFragment_to_lookingFragment"
+            app:destination="@id/lookingFragment"
+            app:popUpTo="@id/registerMailFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/lookingFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.gettingUserDetail.LookingFragment"
+        android:label="fragment_looking"
+        tools:layout="@layout/fragment_looking" >
+        <action
+            android:id="@+id/action_lookingFragment_to_DOBFragment"
+            app:destination="@id/DOBFragment"
+            app:popUpTo="@id/registerMailFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/DOBFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.gettingUserDetail.DOBFragment"
+        android:label="fragment_d_o_b"
+        tools:layout="@layout/fragment_d_o_b" >
+        <action
+            android:id="@+id/action_DOBFragment_to_selectCountryFragment"
+            app:destination="@id/selectCountryFragment"
+            app:popUpTo="@id/registerMailFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/selectCountryFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.gettingUserDetail.SelectCountryFragment"
+        android:label="fragment_select_country"
+        tools:layout="@layout/fragment_select_country" >
+        <action
+            android:id="@+id/action_selectCountryFragment_to_addImageFragment"
+            app:destination="@id/addImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addImageFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.gettingUserDetail.AddImageFragment"
+        android:label="fragment_add_image"
+        tools:layout="@layout/fragment_add_image" >
+        <action
+            android:id="@+id/action_addImageFragment_to_gettingLocationFragment"
+            app:destination="@id/gettingLocationFragment"
+            app:popUpTo="@id/selectCountryFragment"/>
+        <action
+            android:id="@+id/action_addImageFragment_to_gettingLocationFragment2"
+            app:destination="@id/gettingLocationFragment"
+            app:popUpTo="@id/selectCountryFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeSignInIbeorFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.signInWelcome.WelcomeSignInIbeorFragment"
+        android:label="fragment_welcome_sign_in_ibeor"
+        tools:layout="@layout/fragment_welcome_sign_in_ibeor" >
+        <action
+            android:id="@+id/action_welcomeSignInIbeorFragment_to_signinFinishedFragment"
+            app:destination="@id/signinFinishedFragment"
+            app:popUpTo="@id/selectCountryFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/signinFinishedFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.signInWelcome.SigninFinishedFragment"
+        android:label="fragment_signin_finished"
+        tools:layout="@layout/fragment_signin_finished" >
+        <action
+            android:id="@+id/action_signinFinishedFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2"
+            app:popUpTo="@id/welcomeFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/userInfoFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.userInfo.UserInfoFragment"
+        android:label="fragment_user_info"
+        tools:layout="@layout/fragment_user_info" />
+    <fragment
+        android:id="@+id/filterSettingFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.filterSetting.FilterSettingFragment"
+        android:label="fragment_filter_setting"
+        tools:layout="@layout/fragment_filter_setting" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.userProfile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_profileSettingFragment"
+            app:destination="@id/profileSettingFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileSettingFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.profileSetting.ProfileSettingFragment"
+        android:label="fragment_profile_setting"
+        tools:layout="@layout/fragment_profile_setting" >
+        <action
+            android:id="@+id/action_profileSettingFragment_to_updateMobileNumberFragment"
+            app:destination="@id/updateMobileNumberFragment" />
+        <action
+            android:id="@+id/action_profileSettingFragment_to_loginMethodFragment"
+            app:destination="@id/loginMethodFragment" />
+        <action
+            android:id="@+id/action_profileSettingFragment_to_updateMailFragment"
+            app:destination="@id/updateMailFragment" />
+        <action
+            android:id="@+id/action_profileSettingFragment_to_mailNotificationSettingFragment"
+            app:destination="@id/mailNotificationSettingFragment" />
+        <action
+            android:id="@+id/action_profileSettingFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/welcomeFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/updateMobileNumberFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.updateUserData.UpdateMobileNumberFragment"
+        android:label="fragment_update_mobile_number"
+        tools:layout="@layout/fragment_update_mobile_number" />
+    <fragment
+        android:id="@+id/loginMethodFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.loginMethod.LoginMethodFragment"
+        android:label="fragment_login_method"
+        tools:layout="@layout/fragment_login_method" />
+    <fragment
+        android:id="@+id/updateMailFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.updateUserData.UpdateMailFragment"
+        android:label="fragment_update_mail"
+        tools:layout="@layout/fragment_update_mail" />
+    <fragment
+        android:id="@+id/mailNotificationSettingFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.notificationSetting.MailNotificationSettingFragment"
+        android:label="fragment_mail_notification_setting"
+        tools:layout="@layout/fragment_mail_notification_setting" />
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.editProfile.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" >
+
+        <action
+            android:id="@+id/action_editProfileFragment_to_childrenUserDataByRadioButtonFragment"
+            app:destination="@id/childrenUserDataByRadioButtonFragment" />
+        <action
+            android:id="@+id/action_editProfileFragment_to_lookingForUserDataByTickFragment"
+            app:destination="@id/lookingForUserDataByTickFragment3" />
+        <action
+            android:id="@+id/action_editProfileFragment_to_selectCountryFragment"
+            app:destination="@id/selectCountryFragment" />
+        <action
+            android:id="@+id/action_editProfileFragment_to_selectLanguageFragment"
+            app:destination="@id/selectLanguageFragment" />
+        <action
+            android:id="@+id/action_editProfileFragment_to_previewImageVerticalFragment"
+            app:destination="@id/previewImageVerticalFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/childrenUserDataByRadioButtonFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.editProfile.GettingUserData.ChildrenUserDataByRadioButtonFragment"
+        android:label="fragment_children_user_data_by_radio_button"
+        tools:layout="@layout/fragment_children_user_data_by_radio_button" />
+    <fragment
+        android:id="@+id/lookingForUserDataByTickFragment3"
+        android:name="com.ibeor.ibeorchattingapp.modules.editProfile.GettingUserData.LookingForUserDataByTickFragment"
+        android:label="fragment_looking_for_user_data_by_tick"
+        tools:layout="@layout/fragment_looking_for_user_data_by_tick" />
+    <fragment
+        android:id="@+id/selectLanguageFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.editProfile.GettingUserData.SelectLanguageFragment"
+        android:label="fragment_select_language"
+        tools:layout="@layout/fragment_select_language" />
+    <fragment
+        android:id="@+id/previewImageVerticalFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.previewImage.PreviewImageVerticalFragment"
+        android:label="fragment_preview_image_vertical"
+        tools:layout="@layout/fragment_preview_image_vertical" >
+        <action
+            android:id="@+id/action_previewImageVerticalFragment_to_userInfoFragment"
+            app:destination="@id/userInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.chatting.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_chatFragment_to_likeMeFragment"
+            app:destination="@id/likeMeFragment" />
+        <action
+            android:id="@+id/action_chatFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_chatFragment_to_chatNowFragment"
+            app:destination="@id/chatNowFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/likeMeFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.chatting.LikeMeFragment"
+        android:label="fragment_like_me"
+        tools:layout="@layout/fragment_like_me" >
+        <action
+            android:id="@+id/action_likeMeFragment_to_userInfoFragment"
+            app:destination="@id/userInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatNowFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.chatting.chatNow.ChatNowFragment"
+        android:label="fragment_chat_now"
+        tools:layout="@layout/fragment_chat_now" >
+        <action
+            android:id="@+id/action_chatNowFragment_to_previewChatFragment"
+            app:destination="@id/previewChatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/previewChatFragment"
+        android:name="com.ibeor.ibeorchattingapp.modules.preview_chat_item.PreviewChatFragment"
+        android:label="fragment_preview_chat"
+        tools:layout="@layout/fragment_preview_chat" />
+
+
+</navigation>
